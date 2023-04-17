@@ -1,0 +1,57 @@
+*{
+    margin:  0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/* 이걸 frame 으로 잡은 것 임 여기는 
+    ul 을 기준으로, 그걸 잡고 움직이는것 임. */
+.slide_wrapper {
+    position: relative;
+
+    /* ❓❓❓ 이게 다른거 같은데?  */
+    width: 660px;
+    /* margin: 0 auto; */
+
+    height: 200px;
+    overflow: hidden;
+}
+
+/* ul = slides 
+    이걸 잡고, 이걸 기준으로 움직임. */
+.slides {
+    /* 왜 필요하지❓❓❓  */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* ul 에 ainmated 클래스가 들어오면 -> 변해 */
+.slides.animated {
+    transition: 0.5s ease-out;
+}
+
+
+.slides li {
+    width: 200px;
+    height: 200px;
+    background-color: #ccc;
+    float: left;
+}
+
+.controls span{
+	background:#333;
+	color: #fff;
+	padding:10px 20px;
+	margin:0 10px;
+    cursor: pointer;
+}
+
+/* last child 이외에 30px 씩 주기 ⭐⭐⭐ */
+.slides li:not(:last-child) {
+    margin-right: 30px; 
+}

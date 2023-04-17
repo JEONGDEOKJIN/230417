@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.slide-frame {
+    width: 660px;
+    overflow: hidden;
+    /* 이걸 안 주니까, absolute 할 때 사라지네 ⭐⭐⭐⭐⭐⭐⭐⭐⭐ */
+    height: 200px;
+
+    position: relative;
+}
+
+.item-wrap {
+    width: 1150px;
+    height: 200px;
+    background-color: burlywood;
+
+    position: absolute;
+        /* position: absolute; */
+    left: 0;
+    top: 0;
+}
+
+
+.item-wrap.animated {
+    transition: 0.5s ease-out;
+}
+
+
+.item-wrap .list-item {
+    list-style: none;
+
+    width: 200px;
+    height: 200px;
+    background-color: lightgray;
+
+    float: left;
+
+}
+
+/* ⭐⭐⭐ li 중 끝 부분 제외하고 margin 주기 ⭐⭐⭐ */
+.item-wrap li:not(:last-child) {
+    margin-right: 30px; 
+}
+
+
+
+button {
+    cursor: pointer;
+}
